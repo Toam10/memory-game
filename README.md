@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+# חוקי המשחק 
+1. דף הבית : רישום שם  וכפתור התחל לכניסה לדף המשחק 
+2. כותרת memory game  "your name" על לוח המשחק 
+3. מתחת לכותרת ינתן כמות הנקודות 
+4. פיזור הכלפים על הלוח : לקלפים יש שני צדדים בתור התחלה יתחילו על הצד ההפוך ובלחיצה יתהפכו לצד השני למשתמש יש אפשורות לפתוח שני קלפים בכל תור לאחר מכן יפצח 
+זמן לשלוש שניות ויסגרו הלקלפים בזמן הזה למשתמש אין אפשרות לגעת בקלפים ת הקלפים יהיו עם אימוג'י על הקדימה 
+5. הניקוד יקבע על פי הצלחה של המשתמש על כול הצלחה יקבל 10 נקודות והקלפים ישארו פתוחים ועל כול כישלון יקבל - 5 נקודות והקלפים יסגרו בחזרה לאחר שלוש שניות
+6.  המשתמש יסיים את השמחק לאחר שכל הקלפים ישארו פתוחים ומרגע הנחצון יפתח  דף סיום המשחק אפשורות להוסיף timeout    
