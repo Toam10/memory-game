@@ -1,0 +1,25 @@
+.home-page {
+	font-family: Roboto, sans-serif;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(1, 1fr 0.1fr 0.2fr);
+}
+.home-page-header {
+	font-size: 5em;
+	color: #333;
+	margin: 0px;
+}
+
+.link-to-game {
+	width: 10%;
+	height: 70%;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	margin-top: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1em;
+}
