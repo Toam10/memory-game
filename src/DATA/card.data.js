@@ -1,8 +1,8 @@
 export const cardsData = [
-	{ id: 1, color: "red", isFliped: false, discoverd: false },
-	{ id: 2, color: "red", isFliped: false, discoverd: false },
-	{ id: 3, color: "green", isFliped: false, discoverd: false },
-	{ id: 4, color: "green", isFliped: false, discoverd: false },
-	{ id: 5, color: "yellow", isFliped: false, discoverd: false },
-	{ id: 6, color: "yellow", isFliped: false, discoverd: false },
+	{ id: 0, color: "red", isFlipped: false, discoverd: false },
+	{ id: 1, color: "red", isFlipped: false, discoverd: false },
+	{ id: 2, color: "green", isFlipped: false, discoverd: false },
+	{ id: 3, color: "green", isFlipped: false, discoverd: false },
+	{ id: 4, color: "yellow", isFlipped: false, discoverd: false },
+	{ id: 5, color: "yellow", isFlipped: false, discoverd: false },
 ];

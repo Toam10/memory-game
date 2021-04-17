@@ -23,7 +23,7 @@ const HomePage = () => {
 			</h1>
 			<p>please write your name</p>
 			<input className='username-input' onChange={inputHandler} type='text' />
-			<Link className='link-to-game' onClick={onSubmit} to='/game'>
+			<Link className='link-to-game' onClick={onSubmit} to={userNameValue.length !== 0 ? '/game' : '/'}>
 				Start
 			</Link>
 		</div>
