@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import "./card.styles.css";
 import { useDispatch, useSelector } from "react-redux";
-import { flipCard } from "../../actions/actions.index";
+import { flipCard, clearFlipCards } from "../../actions/actions.index";
+import { Redirect, Route } from "react-router-dom";
+import HomePage from "../../Pages/home-page/home.component";
+
 const Card = ({ card, id }) => {
 	const cardsData = useSelector((state) => state.cardsData);
 	const flipCardFromState = useSelector((state) => state.flipCard);
@@ -14,6 +17,7 @@ const Card = ({ card, id }) => {
 			}
 		}
 	};
+	const allCardsDiscoverd = cardsData.every((card) => card.discoverd);
 	useEffect(() => {
 		const filterFlipCards = cardsData.filter((card) => card.isFlipped);
 		if (flipCardFromState.length === 2) {
@@ -22,18 +26,21 @@ const Card = ({ card, id }) => {
 			if (sameCards) {
 				filterFlipCards.forEach((card) => (cardsData[card.id].discoverd = true));
 				filterFlipCards.forEach((card) => (cardsData[card.id].isFlipped = false));
-				return console.log(cardsData);
+				return dispatch(clearFlipCards());
 			} else {
 				setTimeout(() => {
 					cardsData.forEach((card) => (card.isFlipped = false));
 					console.log(cardsData);
+					return dispatch(clearFlipCards());
 				}, 3000);
 			}
 		}
-	}, [cardsData, flipCardFromState.length]);
+	}, [allCardsDiscoverd, cardsData, dispatch, flipCardFromState.length]);
 
 	return (
 		<div onClick={handleFlippedCard} className='flip-card'>
+			{allCardsDiscoverd && <Redirect to='/' />}
+			{allCardsDiscoverd && cardsData.forEach((card) => (card.discoverd = false))}
 			<div className='flip-card-inner'>
 				<div className='flip-card-front'></div>
 				<div className='flip-card-back'>

@@ -13,6 +13,10 @@ export const flipCard = (card) => ({
 	payload: card,
 });
 
+export const clearFlipCards = () => ({
+	type: actionType.CLEAR_FLIP_CARDS,
+});
+
 export const loadData = (data) => ({
 	type: actionType.LOAD_DATA,
 	payload: data,
