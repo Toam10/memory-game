@@ -41,15 +41,20 @@
 	height: 15em;
 }
 
-.is-flipped {
+.flip .flip-inner {
+	transform: rotateY(180deg);
+}
+
+.inner-flipped {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	transition: transform 0.8s;
 	transform-style: preserve-3d;
+	transition: transform 0.8s;
+
 }
 
-.flip .flip-inner {
+.flipped .inner-flipped {
 	transform: rotateY(180deg);
 }
